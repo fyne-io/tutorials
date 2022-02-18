@@ -1,4 +1,11 @@
-#!/bin/sh
+#!/bin/bash
+
+if [[ $# -eq 0 || ($# -eq 1 && "$1" == "-h" || "$1" == "--help" )]]; then
+	echo "A command to generate tutorial video cover images,"
+	echo "Usage:"
+	echo "	$0 [section] title"
+	exit 0
+fi
 
 section="Getting Started"
 title=$1
